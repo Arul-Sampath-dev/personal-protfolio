@@ -61,17 +61,6 @@ export default function Hero() {
         {/* Left side: Bio text */}
         <div id="hero-left-content" className="lg:col-span-7 flex flex-col items-start text-left space-y-6">
           
-          <motion.div
-            id="intro-badge"
-            initial={{ opacity: 0, y: 15 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="inline-flex items-center space-x-2 bg-gradient-to-r from-indigo-500/10 to-cyan-500/10 border border-indigo-500/20 px-3.5 py-1 rounded-full text-xs font-semibold text-cyan-300 tracking-wide"
-          >
-            <Sparkles className="w-3.5 h-3.5 text-cyan-400 animate-pulse" />
-            <span className="font-mono">Open for 2026 Opportunities</span>
-          </motion.div>
-
           <div id="hero-name-header" className="space-y-2">
             <motion.h4
               initial={{ opacity: 0, y: 15 }}
@@ -79,7 +68,7 @@ export default function Hero() {
               transition={{ duration: 0.5, delay: 0.1 }}
               className="text-gray-400 font-mono text-sm uppercase tracking-widest"
             >
-              Hi, my name is
+              Hi, I am
             </motion.h4>
             
             <motion.h1
@@ -271,7 +260,7 @@ export default function Hero() {
                 {/* Subtext info panel inside avatar */}
                 <div className="absolute bottom-6 left-0 right-0 text-center z-20">
                   <span className="font-mono text-[10px] sm:text-xs text-cyan-300 tracking-[0.25em] uppercase font-bold bg-[#050816]/70 px-4 py-1 rounded-full border border-white/5">
-                    SYS_LOADED
+                    ARUL S
                   </span>
                 </div>
               </div>
