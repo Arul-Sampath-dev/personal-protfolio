@@ -1,0 +1,6 @@
+{
+  "name": "Arul Sampath Portfolio",
+  "description": "Premium personal portfolio for Arul Sampath, AI & Software Engineer",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

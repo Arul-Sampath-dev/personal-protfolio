@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="gridGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#02010a"/>
+      <stop offset="100%" stop-color="#2a085c"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#14062f"/>
+      <stop offset="100%" stop-color="#070214"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background with cosmic feel -->
+  <rect width="800" height="450" fill="url(#gridGrad)"/>
+  <circle cx="100" cy="80" r="120" fill="#a78bfa" opacity="0.08" filter="blur(70px)"/>
+  <circle cx="700" cy="380" r="150" fill="#ec4899" opacity="0.06" filter="blur(90px)"/>
+
+  <!-- Top bar -->
+  <rect x="0" y="0" width="800" height="60" fill="rgba(255, 255, 255, 0.02)" stroke="rgba(255, 255, 255, 0.05)" stroke-width="1"/>
+  <text x="40" y="36" font-family="sans-serif" font-weight="900" font-size="20" fill="#fff" letter-spacing="2">DOTZ'12</text>
+  <text x="140" y="34" font-family="sans-serif" font-weight="500" font-size="11" fill="#ec4899" letter-spacing="1">NATIONAL UTILITY SYMPOSIUM</text>
+
+  <!-- Navigation items placeholder -->
+  <text x="470" y="35" font-family="sans-serif" font-weight="bold" font-size="12" fill="#d8b4fe">Register</text>
+  <text x="550" y="35" font-family="sans-serif" font-weight="medium" font-size="12" fill="rgba(255,255,255,0.6)">Workshops</text>
+  <text x="640" y="35" font-family="sans-serif" font-weight="medium" font-size="12" fill="rgba(255,255,255,0.6)">Accommodations</text>
+  
+  <!-- Active Category -->
+  <rect x="715" y="15" width="45" height="4" fill="#ec4899" rx="2" />
+  
+  <!-- Content Header -->
+  <text x="40" y="105" font-family="sans-serif" font-weight="bold" font-size="16" fill="#fff">Technical Competition Tracks &amp; Events</text>
+  <text x="40" y="123" font-family="sans-serif" font-size="10" fill="rgba(255,255,255,0.45)">Select track options below to proceed to checkout checkout desk</text>
+
+  <!-- Events Grid -->
+  <!-- Card 1: Web presentation -->
+  <g transform="translate(40, 140)">
+    <rect x="0" y="0" width="220" height="260" rx="14" fill="url(#cardGrad)" stroke="rgba(236,72,153,0.3)" stroke-width="1.5" filter="drop-shadow(0 10px 15px rgba(0,0,0,0.6))"/>
+    <text x="20" y="32" font-family="sans-serif" font-weight="900" font-size="16" fill="#fcfcfc">PPT PLATINUM</text>
+    <text x="20" y="50" font-family="monospace" font-size="9" fill="#ec4899">PAPER PRESENTATION</text>
+    <rect x="20" y="65" width="180" height="1" fill="rgba(255,255,255,0.1)"/>
+    <text x="20" y="90" font-family="sans-serif" font-size="10" fill="rgba(255,255,255,0.7)">Submit theoretical designs</text>
+    <text x="20" y="105" font-family="sans-serif" font-size="10" fill="rgba(255,255,255,0.7)">and active source prototypes</text>
+    <text x="20" y="120" font-family="sans-serif" font-size="10" fill="rgba(255,255,255,0.7)">under review panels.</text>
+
+    <!-- Cash label -->
+    <text x="20" y="200" font-family="sans-serif" font-weight="bold" font-size="20" fill="#fff">₹150</text>
+    <text x="70" y="198" font-family="sans-serif" font-size="9" fill="rgba(255,255,255,0.4)">/ team registration</text>
+
+    <!-- Quick select action -->
+    <rect x="20" y="215" width="180" height="30" rx="8" fill="#bc1088"/>
+    <text x="110" y="233" font-family="sans-serif" font-weight="bold" font-size="11" fill="#fff" text-anchor="middle">Add to Ticket Basket</text>
+  </g>
+
+  <!-- Card 2: Bug Hunting -->
+  <g transform="translate(290, 140)">
+    <rect x="0" y="0" width="220" height="260" rx="14" fill="url(#cardGrad)" stroke="rgba(255,255,255,0.06)" stroke-width="1" filter="drop-shadow(0 10px 15px rgba(0,0,0,0.6))"/>
+    <text x="20" y="32" font-family="sans-serif" font-weight="900" font-size="16" fill="#fcfcfc">BYTE HARVEST</text>
+    <text x="20" y="50" font-family="monospace" font-size="9" fill="#a78bfa">BUG HUNTING COMBAT</text>
+    <rect x="20" y="65" width="180" height="1" fill="rgba(255,255,255,0.1)"/>
+    <text x="20" y="90" font-family="sans-serif" font-size="10" fill="rgba(255,255,255,0.7)">Solve custom debug arrays</text>
+    <text x="20" y="105" font-family="sans-serif" font-size="10" fill="rgba(255,255,255,0.7)">across C/C++ backend loops</text>
+    <text x="20" y="120" font-family="sans-serif" font-size="10" fill="rgba(255,255,255,0.7)">with strict time metrics.</text>
+
+    <!-- Cash label -->
+    <text x="20" y="200" font-family="sans-serif" font-weight="bold" font-size="20" fill="#fff">₹100</text>
+    <text x="70" y="198" font-family="sans-serif" font-size="9" fill="rgba(255,255,255,0.4)">/ solo challenge</text>
+
+    <!-- Quick select action (Select status) -->
+    <rect x="20" y="215" width="180" height="30" rx="8" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+    <text x="110" y="233" font-family="sans-serif" font-weight="bold" font-size="11" fill="rgba(255,255,255,0.5)" text-anchor="middle">Add to Ticket Basket</text>
+  </g>
+
+  <!-- Card 3: AI Symposium presentation -->
+  <g transform="translate(540, 140)">
+    <rect x="0" y="0" width="220" height="260" rx="14" fill="url(#cardGrad)" stroke="rgba(255,255,255,0.06)" stroke-width="1" filter="drop-shadow(0 10px 15px rgba(0,0,0,0.6))"/>
+    <text x="20" y="32" font-family="sans-serif" font-weight="900" font-size="16" fill="#fcfcfc">PROMPT CRAFT</text>
+    <text x="20" y="50" font-family="monospace" font-size="9" fill="#0ea5e9">INTELLIGENT AI AGENTS</text>
+    <rect x="20" y="65" width="180" height="1" fill="rgba(255,255,255,0.1)"/>
+    <text x="20" y="90" font-family="sans-serif" font-size="10" fill="rgba(255,255,255,0.7)">Format complex agent logic</text>
+    <text x="20" y="105" font-family="sans-serif" font-size="10" fill="rgba(255,255,255,0.7)">to bypass safety loops</text>
+    <text x="20" y="120" font-family="sans-serif" font-size="10" fill="rgba(255,255,255,0.7)">and perform tasks.</text>
+
+    <!-- Cash label -->
+    <text x="20" y="200" font-family="sans-serif" font-weight="bold" font-size="20" fill="#fff">₹120</text>
+    <text x="70" y="198" font-family="sans-serif" font-size="9" fill="rgba(255,255,255,0.4)">/ duo team register</text>
+
+    <!-- Quick select action -->
+    <rect x="20" y="215" width="180" height="30" rx="8" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+    <text x="110" y="233" font-family="sans-serif" font-weight="bold" font-size="11" fill="rgba(255,255,255,0.5)" text-anchor="middle">Add to Ticket Basket</text>
+  </g>
+</svg>

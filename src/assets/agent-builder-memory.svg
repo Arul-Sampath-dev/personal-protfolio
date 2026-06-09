@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="deepDark" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#02040a"/>
+      <stop offset="100%" stop-color="#0d0e12"/>
+    </linearGradient>
+    <linearGradient id="purpleRing" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#a78bfa"/>
+      <stop offset="100%" stop-color="#818cf8"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="450" fill="url(#deepDark)"/>
+
+  <!-- Top metadata lines -->
+  <text x="50" y="45" font-family="monospace" font-size="12" fill="#818cf8">[SYSTEM MONITOR] Stateful Trace Log - Active Session Flow</text>
+
+  <!-- Left panel: Graph Stack -->
+  <rect x="50" y="70" width="310" height="330" rx="12" fill="rgba(255,255,255,0.01)" stroke="rgba(255,255,255,0.05)" stroke-width="1.5"/>
+  <text x="75" y="105" font-family="sans-serif" font-weight="bold" font-size="13" fill="#fff">Memory Buffer Allocation</text>
+
+  <!-- Step blocks inside left panel -->
+  <g transform="translate(70, 130)">
+    <rect x="0" y="0" width="270" height="45" rx="6" fill="rgba(110, 231, 183, 0.08)" stroke="#10b981" stroke-width="1"/>
+    <text x="15" y="18" font-family="monospace" font-size="9" fill="#10b981">STEP 1: USER_INPUT (Trigger)</text>
+    <text x="15" y="32" font-family="sans-serif" font-size="10" fill="rgba(255,255,255,0.8)">"Can you scan solidity reentrancy check..."</text>
+  </g>
+
+  <g transform="translate(70, 195)">
+    <rect x="0" y="0" width="270" height="45" rx="6" fill="rgba(129, 140, 248, 0.08)" stroke="#6366f1" stroke-width="1"/>
+    <text x="15" y="18" font-family="monospace" font-size="9" fill="#818cf8">STEP 2: AGENT_SYSTEM_PROMPT</text>
+    <text x="15" y="32" font-family="sans-serif" font-size="10" fill="rgba(255,255,255,0.8)">Applying prompt context &amp; custom scanning instructions</text>
+  </g>
+
+  <g transform="translate(70, 260)">
+    <rect x="0" y="0" width="270" height="45" rx="6" fill="rgba(251, 191, 36, 0.08)" stroke="#f59e0b" stroke-width="1"/>
+    <text x="15" y="18" font-family="monospace" font-size="9" fill="#f59e0b">STEP 3: LANGCHAIN_TOOL_CALL</text>
+    <text x="15" y="32" font-family="sans-serif" font-size="10" fill="rgba(255,255,255,0.8)">Calling Slither analysis tool vector parameters</text>
+  </g>
+
+  <g transform="translate(70, 325)">
+    <rect x="0" y="0" width="270" height="45" rx="6" fill="rgba(239, 68, 68, 0.08)" stroke="#ef4444" stroke-width="1" stroke-dasharray="3 3"/>
+    <text x="15" y="18" font-family="monospace" font-size="9" fill="#ef4444">STEP 4: MODEL_COMPLETION (Pending)</text>
+    <text x="15" y="32" font-family="sans-serif" font-size="10" fill="rgba(255,255,255,0.5)">Awaiting model generation tokens...</text>
+  </g>
+
+  <!-- Right panel: Memory diagram visual / Node-edge circular representation -->
+  <rect x="390" y="70" width="360" height="330" rx="12" fill="rgba(255,255,255,0.01)" stroke="rgba(255,255,255,0.05)" stroke-width="1.5"/>
+  <circle cx="570" cy="220" r="85" fill="none" stroke="rgba(129, 140, 248, 0.15)" stroke-width="3"/>
+  <circle cx="570" cy="220" r="115" fill="none" stroke="url(#purpleRing)" stroke-width="1" stroke-dasharray="3 3" opacity="0.6"/>
+
+  <!-- Interconnected Dots around the circle mimicking attention parameters -->
+  <circle cx="570" cy="135" r="8" fill="#10b981"/> <!-- Node 1 -->
+  <circle cx="485" cy="220" r="8" fill="#6366f1"/> <!-- Node 2 -->
+  <circle cx="570" cy="305" r="8" fill="#f59e0b"/> <!-- Node 3 -->
+  <circle cx="655" cy="220" r="8" fill="#0ea5e9"/> <!-- Node 4 -->
+
+  <path d="M 570 135 L 485 220" stroke="#fff" stroke-width="1" opacity="0.3"/>
+  <path d="M 485 220 L 570 305" stroke="#fff" stroke-width="1" opacity="0.3"/>
+  <path d="M 570 305 L 655 220" stroke="#fff" stroke-width="1" opacity="0.3"/>
+  <path d="M 655 220 L 570 135" stroke="#fff" stroke-width="1" opacity="0.3"/>
+  <path d="M 570 135 L 570 305" stroke="#fff" stroke-width="2" stroke-dasharray="2 2" opacity="0.4"/>
+
+  <!-- Data values on nodes -->
+  <text x="570" y="118" font-family="monospace" font-size="9" fill="rgba(255,255,255,0.6)" text-anchor="middle">Input: Context</text>
+  <text x="470" y="240" font-family="monospace" font-size="9" fill="rgba(255,255,255,0.6)" text-anchor="middle">Weights</text>
+  <text x="570" y="328" font-family="monospace" font-size="9" fill="rgba(255,255,255,0.6)" text-anchor="middle">Memory Log</text>
+  <text x="670" y="240" font-family="monospace" font-size="9" fill="rgba(255,255,255,0.6)" text-anchor="middle">API router</text>
+
+  <!-- Big Central Info indicator -->
+  <circle cx="570" cy="220" r="45" fill="#0c111e"/>
+  <text x="570" y="217" font-family="sans-serif" font-weight="900" font-size="13" fill="#818cf8" text-anchor="middle">8.4k</text>
+  <text x="570" y="232" font-family="sans-serif" font-size="8" fill="rgba(255,255,255,0.4)" text-anchor="middle">TOKENS USED</text>
+</svg>

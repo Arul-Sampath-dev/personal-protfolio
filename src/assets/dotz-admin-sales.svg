@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="adminBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#05010c"/>
+      <stop offset="100%" stop-color="#14021f"/>
+    </linearGradient>
+    <linearGradient id="revenueGlow" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="rgba(192, 38, 211, 0.0)"/>
+      <stop offset="100%" stop-color="rgba(192, 38, 211, 0.4)"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="450" fill="url(#adminBg)"/>
+
+  <!-- Admin Title Header -->
+  <text x="40" y="45" font-family="sans-serif" font-weight="900" font-size="16" fill="#fff" letter-spacing="1">CONSOLE: SYMPOSIUM OPERATIONS MONITOR</text>
+  <rect x="520" y="25" width="240" height="26" rx="6" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.1)"/>
+  <circle cx="535" cy="38" r="4" fill="#22c55e"/>
+  <text x="548" y="42" font-family="monospace" font-size="9" fill="#22c55e">GATEWAY: CASHFREE_STABLE_ONLINE</text>
+
+  <!-- Ticket Metrics Widgets -->
+  <!-- Widget 1: Count of registers -->
+  <g transform="translate(40, 80)">
+    <rect width="220" height="90" rx="10" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.04)"/>
+    <text x="20" y="30" font-family="sans-serif" font-size="10" fill="rgba(255,255,255,0.4)" font-weight="bold" letter-spacing="1">TOTAL PARTICIPANTS</text>
+    <text x="20" y="66" font-family="sans-serif" font-size="32" fill="#fff" font-weight="900">247</text>
+    <rect x="150" y="44" width="50" height="20" rx="4" fill="rgba(34,197,94,0.15)"/>
+    <text x="175" y="58" font-family="sans-serif" font-size="9" font-weight="bold" fill="#22c55e" text-anchor="middle">+14%</text>
+  </g>
+
+  <!-- Widget 2: Cash reconciliation -->
+  <g transform="translate(290, 80)">
+    <rect width="220" height="90" rx="10" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.04)"/>
+    <text x="20" y="30" font-family="sans-serif" font-size="10" fill="rgba(255,255,255,0.4)" font-weight="bold" letter-spacing="1">RECONCILED SALES</text>
+    <text x="20" y="66" font-family="sans-serif" font-size="32" fill="#fff" font-weight="900">₹34,600</text>
+    <rect x="140" y="44" width="65" height="20" rx="4" fill="rgba(192, 38, 211, 0.15)"/>
+    <text x="172" y="58" font-family="sans-serif" font-size="9" font-weight="bold" fill="#df86ec" text-anchor="middle">100% SECURE</text>
+  </g>
+
+  <!-- Widget 3: Event Overbooking Limits -->
+  <g transform="translate(540, 80)">
+    <rect width="220" height="90" rx="10" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.04)"/>
+    <text x="20" y="30" font-family="sans-serif" font-size="10" fill="rgba(255,255,255,0.4)" font-weight="bold" letter-spacing="1">EVENT SLOTS BUSY</text>
+    <text x="20" y="66" font-family="sans-serif" font-size="32" fill="#fff" font-weight="900">82.3%</text>
+    <rect x="150" y="44" width="50" height="20" rx="4" fill="rgba(234,179,8,0.15)"/>
+    <text x="175" y="58" font-family="sans-serif" font-size="9" font-weight="bold" fill="#facc15" text-anchor="middle">CRITICAL</text>
+  </g>
+
+  <!-- Bottom graph pane: Transactions feed and daily volumes -->
+  <rect x="40" y="190" width="720" height="220" rx="12" fill="rgba(255,255,255,0.01)" stroke="rgba(255,255,255,0.05)"/>
+  <text x="60" y="222" font-family="sans-serif" font-size="12" font-weight="bold" fill="#fff">Real-Time Registration Stream (Brevo Webhook Trace)</text>
+
+  <!-- Table rows representing registered delegates -->
+  <!-- Row 1 -->
+  <g transform="translate(60, 240)">
+    <circle cx="10" cy="12" r="4" fill="#10b981"/>
+    <text x="30" y="16" font-family="sans-serif" font-size="11" fill="rgba(255,255,255,0.85)">Naresh Kumar (Sathyabama Uni)</text>
+    <text x="320" y="16" font-family="monospace" font-size="10" fill="#ec4899">BUG HUNT TRACK</text>
+    <text x="490" y="15" font-family="monospace" font-size="10" fill="rgba(255,255,255,0.4)">Txn: cf_74381023a</text>
+    <rect x="610" y="3" width="70" height="18" rx="4" fill="rgba(16,185,129,0.15)"/>
+    <text x="645" y="15" font-family="sans-serif" font-weight="bold" font-size="8" fill="#10b981" text-anchor="middle">CONFIRMED</text>
+  </g>
+  <line x1="60" y1="270" x2="740" y2="270" stroke="rgba(255,255,255,0.03)"/>
+
+  <!-- Row 2 -->
+  <g transform="translate(60, 285)">
+    <circle cx="10" cy="12" r="4" fill="#10b981"/>
+    <text x="30" y="16" font-family="sans-serif" font-size="11" fill="rgba(255,255,255,0.85)">Meera S. (Anna University)</text>
+    <text x="320" y="16" font-family="monospace" font-size="10" fill="#ec4899">PPT PLATINUM</text>
+    <text x="490" y="15" font-family="monospace" font-size="10" fill="rgba(255,255,255,0.4)">Txn: cf_74381029z</text>
+    <rect x="610" y="3" width="70" height="18" rx="4" fill="rgba(16,185,129,0.15)"/>
+    <text x="645" y="15" font-family="sans-serif" font-weight="bold" font-size="8" fill="#10b981" text-anchor="middle">CONFIRMED</text>
+  </g>
+  <line x1="60" y1="315" x2="740" y2="315" stroke="rgba(255,255,255,0.03)"/>
+
+  <!-- Row 3 -->
+  <g transform="translate(60, 330)">
+    <circle cx="10" cy="12" r="4" fill="#3b82f6"/>
+    <text x="30" y="16" font-family="sans-serif" font-size="11" fill="rgba(255,255,255,0.85)">Arjun Prasad (VIT Vellore)</text>
+    <text x="320" y="16" font-family="monospace" font-size="10" fill="#ec4899">PROMPT CRAFT</text>
+    <text x="490" y="15" font-family="monospace" font-size="10" fill="rgba(255,255,255,0.4)">Txn: cf_74381033b</text>
+    <rect x="610" y="3" width="70" height="18" rx="4" fill="rgba(59,130,246,0.15)"/>
+    <text x="645" y="15" font-family="sans-serif" font-weight="bold" font-size="8" fill="#3b82f6" text-anchor="middle">PENDING WEBHOOK</text>
+  </g>
+  <line x1="60" y1="360" x2="740" y2="360" stroke="rgba(255,255,255,0.03)"/>
+
+</svg>

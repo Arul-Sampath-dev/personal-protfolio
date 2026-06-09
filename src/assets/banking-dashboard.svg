@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="fxBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="goldPlate" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fbbf24"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="450" fill="url(#fxBg)"/>
+
+  <!-- Desktop App Chrome Layout (JavaFX Container Frame) -->
+  <rect x="25" y="25" width="750" height="400" rx="10" fill="#1e293b" stroke="rgba(255,255,255,0.08)" stroke-width="1.5"/>
+
+  <!-- Frame Header bar -->
+  <rect x="25" y="25" width="750" height="40" rx="10" fill="#0f172a"/>
+  <!-- Windows buttons (JavaFX CSS styled) -->
+  <circle cx="50" cy="45" r="5" fill="#ef4444"/>
+  <circle cx="65" cy="45" r="5" fill="#eab308"/>
+  <circle cx="80" cy="45" r="5" fill="#22c55e"/>
+  
+  <text x="380" y="50" font-family="sans-serif" font-weight="bold" font-size="12" fill="#94a3b8" text-anchor="middle">JavaFX Java Banking Terminal v1.4.2 [Production Client]</text>
+
+  <!-- Left Sidebar inside App -->
+  <rect x="25" y="65" width="160" height="360" fill="#0f172a" opacity="0.5"/>
+  <g transform="translate(45, 100)">
+    <!-- Sidebar action list -->
+    <text x="0" y="0" font-family="sans-serif" font-weight="900" font-size="11" fill="#fbbf24" letter-spacing="1">DASHBOARD</text>
+    <text x="0" y="35" font-family="sans-serif" font-weight="medium" font-size="11" fill="#fff">Accounts Ledger</text>
+    <text x="0" y="70" font-family="sans-serif" font-weight="medium" font-size="11" fill="rgba(255,255,255,0.5)">Transfer Funds</text>
+    <text x="0" y="105" font-family="sans-serif" font-weight="medium" font-size="11" fill="rgba(255,255,255,0.5)">Loan Management</text>
+    <text x="0" y="140" font-family="sans-serif" font-weight="medium" font-size="11" fill="rgba(255,255,255,0.5)">Audit history logs</text>
+    <text x="0" y="290" font-family="monospace" font-size="9" fill="#10b981">Session: Secure TLS</text>
+  </g>
+
+  <!-- Content Dashboard Panel -->
+  <text x="210" y="100" font-family="sans-serif" font-weight="bold" font-size="18" fill="#fff">Welcome back, Administrator</text>
+  <text x="210" y="118" font-family="sans-serif" font-size="11" fill="rgba(255,255,255,0.4)">Audit Desk Model-View-Controller State Monitor</text>
+
+  <!-- Bank Account Cards -->
+  <!-- Card A: Savings Account -->
+  <g transform="translate(210, 140)">
+    <rect width="260" height="130" rx="10" fill="url(#goldPlate)" filter="drop-shadow(0 4px 6px rgba(0,0,0,0.3))"/>
+    <text x="20" y="30" font-family="monospace" font-size="11" fill="#78350f" font-weight="bold">SAVINGS BANK SPECIMEN</text>
+    <text x="20" y="55" font-family="monospace" font-size="10" fill="#78350f">ACC: **** **** 4819</text>
+    <text x="20" y="105" font-family="sans-serif" font-weight="900" font-size="28" fill="#0f172a">$14,582.44</text>
+    <text x="240" y="105" font-family="sans-serif" font-weight="bold" font-size="16" fill="#3b82f6" text-anchor="end">USD</text>
+  </g>
+
+  <!-- Card B: Checking Account -->
+  <g transform="translate(490, 140)">
+    <rect width="260" height="130" rx="10" fill="#0f172a" stroke="rgba(255,255,255,0.06)" stroke-width="1.5" filter="drop-shadow(0 4px 6px rgba(0,0,0,0.3))"/>
+    <text x="20" y="30" font-family="monospace" font-size="11" fill="rgba(255,255,255,0.4)">CURRENT / CHECKING</text>
+    <text x="20" y="55" font-family="monospace" font-size="10" fill="rgba(255,255,255,0.4)">ACC: **** **** 1029</text>
+    <text x="20" y="105" font-family="sans-serif" font-weight="900" font-size="28" fill="#fff">$2,401.10</text>
+    <text x="240" y="105" font-family="sans-serif" font-weight="bold" font-size="16" fill="#10b981" text-anchor="end">USD</text>
+  </g>
+
+  <!-- Recent audit block lines -->
+  <rect x="210" y="290" width="540" height="110" rx="8" fill="#0f172a" opacity="0.6" stroke="rgba(255,255,255,0.03)"/>
+  <text x="230" y="315" font-family="monospace" font-size="11" fill="#fbbf24">Double Entry Transaction Log Stream (MVC Thread Pool synchronized)</text>
+  
+  <text x="230" y="340" font-family="monospace" font-size="10" fill="rgba(255,255,255,0.6)">[12:14:02 UTC] DEPOSIT COMPLETE: +$2,500.00 from Wire cf_92810 - Savings Account</text>
+  <text x="230" y="360" font-family="monospace" font-size="10" fill="rgba(255,255,255,0.6)">[14:10:55 UTC] INTEREST ACCRUAL: +$24.51 (Calculated 2.1% on balance limits)</text>
+  <text x="230" y="380" font-family="monospace" font-size="10" fill="rgba(255,255,255,0.6)">[17:01:21 UTC] AUDIT SUCCESS: Ledger checksums validation matches database indices</text>
+</svg>

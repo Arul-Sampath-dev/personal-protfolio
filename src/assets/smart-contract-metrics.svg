@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#030712"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+    <linearGradient id="blueGrad" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="rgba(14, 165, 233, 0.05)"/>
+      <stop offset="100%" stop-color="rgba(14, 165, 233, 0.35)"/>
+    </linearGradient>
+    <linearGradient id="indigoGrad" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="rgba(99, 102, 241, 0.0)"/>
+      <stop offset="100%" stop-color="rgba(99, 102, 241, 0.25)"/>
+    </linearGradient>
+    <pattern id="matrixGrid" width="50" height="50" patternUnits="userSpaceOnUse">
+      <path d="M 50 0 L 0 0 0 50" fill="none" stroke="rgba(255, 255, 255, 0.02)" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="800" height="450" fill="url(#bg)"/>
+  <rect width="800" height="450" fill="url(#matrixGrid)"/>
+
+  <!-- Radial glow -->
+  <circle cx="400" cy="225" r="300" fill="#6366f1" opacity="0.05" filter="blur(100px)"/>
+
+  <!-- Panel Board UI -->
+  <rect x="40" y="40" width="720" height="370" rx="16" fill="rgba(255,255,255,0.01)" stroke="rgba(255,255,255,0.06)" stroke-width="1.5"/>
+
+  <!-- Header -->
+  <text x="70" y="75" font-family="sans-serif" font-weight="bold" font-size="16" fill="#fff" letter-spacing="1">GraphCodeBERT + GNN Validation Dashboard</text>
+  <text x="70" y="95" font-family="monospace" font-size="11" fill="rgba(255,255,255,0.45)">Epoch Training Status: Complete | Current Learning Rate: 1e-5</text>
+
+  <!-- Left: Accuracy Curve -->
+  <!-- Axis Grid Lines -->
+  <g stroke="rgba(255,255,255,0.05)" stroke-width="1">
+    <line x1="100" y1="150" x2="380" y2="150"/>
+    <line x1="100" y1="200" x2="380" y2="200"/>
+    <line x1="100" y1="250" x2="380" y2="250"/>
+    <line x1="100" y1="300" x2="380" y2="300"/>
+  </g>
+  <line x1="100" y1="350" x2="380" y2="350" stroke="rgba(255,255,255,0.2)" stroke-width="1.5"/>
+  <line x1="100" y1="130" x2="100" y2="350" stroke="rgba(255,255,255,0.2)" stroke-width="1.5"/>
+
+  <!-- Metric Graph Values -->
+  <text x="80" y="153" font-family="monospace" font-size="10" fill="rgba(255,255,255,0.4)">100%</text>
+  <text x="80" y="203" font-family="monospace" font-size="10" fill="rgba(255,255,255,0.4)">96%</text>
+  <text x="80" y="253" font-family="monospace" font-size="10" fill="rgba(255,255,255,0.4)">92%</text>
+  <text x="80" y="303" font-family="monospace" font-size="10" fill="rgba(255,255,255,0.4)">88%</text>
+
+  <!-- Accuracy Curve Area Plot -->
+  <path d="M 100 350 L 105 320 Q 150 280 180 230 Q 230 180 280 170 Q 330 162 380 156 L 380 350 Z" fill="url(#blueGrad)"/>
+  <path d="M 100 320 Q 150 280 180 230 Q 230 180 280 170 Q 330 162 380 156" fill="none" stroke="#0ea5e9" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Pulse Pointer -->
+  <circle cx="380" cy="156" r="5" fill="#38bdf8"/>
+  <circle cx="380" cy="156" r="12" fill="none" stroke="#38bdf8" stroke-width="1.5" opacity="0.5"/>
+
+  <!-- Label text left -->
+  <text x="240" y="380" font-family="sans-serif" font-weight="bold" font-size="13" fill="#38bdf8" text-anchor="middle">Classification Accuracy: 97.96%</text>
+
+  <!-- Right: Loss Curves -->
+  <!-- Axis Grid Lines -->
+  <g stroke="rgba(255,255,255,0.05)" stroke-width="1">
+    <line x1="450" y1="150" x2="730" y2="150"/>
+    <line x1="450" y1="200" x2="730" y2="200"/>
+    <line x1="450" y1="250" x2="730" y2="250"/>
+    <line x1="450" y1="300" x2="730" y2="300"/>
+  </g>
+  <line x1="450" y1="350" x2="730" y2="350" stroke="rgba(255,255,255,0.2)" stroke-width="1.5"/>
+  <line x1="450" y1="130" x2="450" y2="350" stroke="rgba(255,255,255,0.2)" stroke-width="1.5"/>
+
+  <!-- Loss Curve values -->
+  <text x="430" y="153" font-family="monospace" font-size="10" fill="rgba(255,255,255,0.4)">0.8</text>
+  <text x="430" y="203" font-family="monospace" font-size="10" fill="rgba(255,255,255,0.4)">0.6</text>
+  <text x="430" y="253" font-family="monospace" font-size="10" fill="rgba(255,255,255,0.4)">0.4</text>
+  <text x="430" y="303" font-family="monospace" font-size="10" fill="rgba(255,255,255,0.4)">0.2</text>
+
+  <!-- Train Loss & Val Loss lines -->
+  <path d="M 450 145 Q 510 220 560 260 Q 620 300 680 320 T 730 335" fill="none" stroke="#6366f1" stroke-width="2"/>
+  <path d="M 450 160 Q 510 240 560 280 Q 620 320 680 338 T 730 342" fill="none" stroke="#a78bfa" stroke-width="2" stroke-dasharray="3 3"/>
+
+  <!-- Pulsing validation final point -->
+  <circle cx="730" cy="342" r="4" fill="#a78bfa"/>
+
+  <!-- Label text right -->
+  <text x="590" y="380" font-family="sans-serif" font-weight="bold" font-size="13" fill="#818cf8" text-anchor="middle">Log Entropy Loss: 0.043</text>
+
+  <!-- Overlay Stats Badge -->
+  <g transform="translate(620, 60)">
+    <rect x="0" y="0" width="110" height="36" rx="8" fill="rgba(34, 197, 94, 0.15)" stroke="#22c55e" stroke-width="1"/>
+    <text x="55" y="22" font-family="sans-serif" font-size="11" font-weight="bold" fill="#4ade80" text-anchor="middle">STABLE FIT</text>
+  </g>
+</svg>
