@@ -52,13 +52,17 @@ export default function Contact() {
       return;
     }
 
-    setStatus("sending");
+    const mailtoSubject = encodeURIComponent(form.subject || `Message from ${form.name}`);
+    const mailtoBody = encodeURIComponent(
+      `Name: ${form.name}\n` +
+      `Email: ${form.email}\n\n` +
+      `Message:\n${form.message}`
+    );
 
-    // Simulate server side relay with success reporting
-    setTimeout(() => {
-      setStatus("success");
-      setForm({ name: "", email: "", subject: "", message: "" });
-    }, 1500);
+    window.location.href = `mailto:arulsampathcyr@gmail.com?subject=${mailtoSubject}&body=${mailtoBody}`;
+
+    setStatus("success");
+    setForm({ name: "", email: "", subject: "", message: "" });
   };
 
   return (
