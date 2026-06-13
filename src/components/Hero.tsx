@@ -5,10 +5,12 @@ import { ArrowRight, Download, Mail, Github, Linkedin, Sparkles, Terminal } from
 import profileImg from "../profile.jpeg";
 
 const roles = [
-  "AI Engineer",
   "Software Developer",
-  "Full Stack Developer",
-  "UI/UX Designer"
+  "FastAPI Developer",
+  "Full-Stack Developer",
+  "Backend Engineer",
+  "AI Engineer",
+  "UI / UX Designer"
 ];
 
 export default function Hero() {
@@ -35,14 +37,7 @@ export default function Hero() {
     }
   };
 
-  const handlePrintResume = () => {
-    const link = document.createElement("a");
-    link.href = "/Arul_S_Resume.pdf";
-    link.download = "Arul_S_Resume.pdf";
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
+
 
   return (
     <section
@@ -103,7 +98,7 @@ export default function Hero() {
             transition={{ duration: 0.5, delay: 0.3 }}
             className="text-gray-300 text-sm sm:text-base max-w-xl leading-relaxed font-sans"
           >
-            Building intelligent software products using AI, modern web technologies, and scalable backend systems. Specialized in GNN security structures, MERN software frameworks, and responsive interactive products.
+            Building scalable backend systems, AI-powered applications, and modern web experiences with FastAPI, React, and PostgreSQL. Passionate about AI Engineering, LLM applications, and creating intelligent software solutions.
           </motion.p>
 
           {/* Socials Link Row */}
@@ -165,14 +160,15 @@ export default function Hero() {
               <span>View Projects</span>
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </button>
-            <button
+            <a
               id="hero-resume-cta"
-              onClick={handlePrintResume}
+              href="/Arul_Resume.pdf"
+              download="Arul_Resume.pdf"
               className="flex items-center justify-center space-x-2 px-6 py-3.5 rounded-xl font-display text-xs sm:text-sm font-semibold text-gray-300 hover:text-white bg-white/5 border border-white/10 hover:border-white/20 hover:bg-white/10 active:scale-98 transition-all duration-200"
             >
               <Download className="w-4 h-4" />
               <span>Download Resume</span>
-            </button>
+            </a>
             <button
               id="hero-contact-cta"
               onClick={() => handleScrollTo("#contact")}

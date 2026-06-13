@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { experiences } from "../data/experience";
-import { Calendar, Building2, Briefcase, Plus, Minus, ArrowRight } from "lucide-react";
+import { Calendar, Building2, Briefcase, Plus, Minus, ArrowRight, Users } from "lucide-react";
 
 export default function Experience() {
   const [expandedId, setExpandedId] = useState<string | null>(experiences[0]?.id || null);
@@ -98,35 +98,70 @@ export default function Experience() {
                         transition={{ duration: 0.25 }}
                         className="overflow-hidden"
                       >
-                        <div className="pt-6 border-t border-white/5 mt-6 space-y-4">
-                          <p className="font-display text-xs font-bold text-gray-400 uppercase tracking-widest">
-                            Key Core Responsibilities
-                          </p>
-                          <ul className="space-y-3">
-                            {exp.responsibilities.map((resp, rIdx) => (
-                              <li key={rIdx} className="flex items-start text-xs sm:text-sm text-gray-300 leading-relaxed">
-                                <ArrowRight className="w-3.5 h-3.5 text-cyan-400 mt-1 mr-2.5 flex-shrink-0" />
-                                <span>{resp}</span>
-                              </li>
-                            ))}
-                          </ul>
+                        <div className="pt-6 border-t border-white/5 mt-6 space-y-6">
+                          {exp.subSections && exp.subSections.length > 0 ? (
+                            exp.subSections.map((sub, sIdx) => (
+                              <div key={sIdx} className="space-y-4 border-b border-white/5 last:border-0 pb-6 last:pb-0">
+                                <h4 className="font-display text-sm font-bold text-cyan-300">
+                                  {sub.title}
+                                </h4>
+                                <ul className="space-y-2.5">
+                                  {sub.responsibilities.map((resp, rIdx) => (
+                                    <li key={rIdx} className="flex items-start text-xs sm:text-sm text-gray-300 leading-relaxed">
+                                      <ArrowRight className="w-3.5 h-3.5 text-cyan-400 mt-1 mr-2.5 flex-shrink-0" />
+                                      <span>{resp}</span>
+                                    </li>
+                                  ))}
+                                </ul>
+                                <div className="space-y-2">
+                                  <span className="text-[10px] font-mono font-bold text-gray-400 uppercase tracking-wider block">
+                                    Tools / Technologies:
+                                  </span>
+                                  <div className="flex flex-wrap gap-2">
+                                    {sub.skills.map((skill) => (
+                                      <span
+                                        key={skill}
+                                        className="text-[10px] font-mono font-medium text-indigo-300 bg-indigo-500/10 border border-indigo-500/15 px-3 py-1 rounded-full"
+                                      >
+                                        {skill}
+                                      </span>
+                                    ))}
+                                  </div>
+                                </div>
+                              </div>
+                            ))
+                          ) : (
+                            <>
+                              <p className="font-display text-xs font-bold text-gray-400 uppercase tracking-widest">
+                                Key Core Responsibilities
+                              </p>
+                              <ul className="space-y-3">
+                                {exp.responsibilities.map((resp, rIdx) => (
+                                  <li key={rIdx} className="flex items-start text-xs sm:text-sm text-gray-300 leading-relaxed">
+                                    <ArrowRight className="w-3.5 h-3.5 text-cyan-400 mt-1 mr-2.5 flex-shrink-0" />
+                                    <span>{resp}</span>
+                                  </li>
+                                ))}
+                              </ul>
 
-                          {/* Skill Tags */}
-                          <div className="pt-4">
-                            <p className="font-display text-xs font-bold text-gray-400 uppercase tracking-widest mb-2.5">
-                              Skills Forged
-                            </p>
-                            <div className="flex flex-wrap gap-2">
-                              {exp.skills.map((skill) => (
-                                <span
-                                  key={skill}
-                                  className="text-[10px] font-mono font-medium text-indigo-300 bg-indigo-500/10 border border-indigo-500/15 px-3 py-1 rounded-full"
-                                >
-                                  {skill}
-                                </span>
-                              ))}
-                            </div>
-                          </div>
+                              {/* Skill Tags */}
+                              <div className="pt-4">
+                                <p className="font-display text-xs font-bold text-gray-400 uppercase tracking-widest mb-2.5">
+                                  Skills Forged
+                                </p>
+                                <div className="flex flex-wrap gap-2">
+                                  {exp.skills.map((skill) => (
+                                    <span
+                                      key={skill}
+                                      className="text-[10px] font-mono font-medium text-indigo-300 bg-indigo-500/10 border border-indigo-500/15 px-3 py-1 rounded-full"
+                                    >
+                                      {skill}
+                                    </span>
+                                  ))}
+                                </div>
+                              </div>
+                            </>
+                          )}
                         </div>
                       </motion.div>
                     )}
@@ -146,6 +181,58 @@ export default function Experience() {
               </div>
             );
           })}
+        </div>
+
+        {/* Leadership & Responsibilities Block */}
+        <div id="leadership-responsibilities-block" className="mt-20 pt-16 border-t border-white/5">
+          <div className="flex flex-col items-start text-left mb-10 space-y-2">
+            <span className="font-mono text-xs font-semibold uppercase tracking-[0.2em] text-indigo-400 animate-pulse">
+              02B . LEADERSHIP ROLES
+            </span>
+            <h3 className="font-display font-bold text-2xl text-white flex items-center gap-2">
+              <Users className="w-5.5 h-5.5 text-cyan-400" />
+              <span>Leadership & Responsibilities</span>
+            </h3>
+            <p className="text-gray-400 text-xs sm:text-sm max-w-lg">
+              Active contributions and community leading roles within the university ecosystem.
+            </p>
+          </div>
+
+          <motion.div
+            id="leadership-card"
+            initial={{ opacity: 0, y: 15 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="p-6 sm:p-8 rounded-2xl bg-white/5 border border-white/5 hover:border-white/10 transition-all duration-300 bg-gradient-to-br from-white/3 via-[#0e1430]/70 to-[#050816] group"
+          >
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-6">
+              <div className="space-y-1">
+                <h4 className="font-display font-bold text-lg text-white group-hover:text-cyan-300 transition-colors">
+                  Student Placement Coordinator
+                </h4>
+                <div className="flex items-center space-x-2 text-gray-400 text-sm">
+                  <Building2 className="w-4 h-4 text-gray-500" />
+                  <span>University College of Engineering, Tindivanam</span>
+                </div>
+              </div>
+              <div className="flex items-center space-x-2 text-xs font-mono text-indigo-300 bg-indigo-500/10 border border-indigo-500/15 px-3 py-1 rounded-full self-start sm:self-center">
+                <Calendar className="w-3.5 h-3.5" />
+                <span>2024 – 2026</span>
+              </div>
+            </div>
+
+            <ul className="space-y-3.5">
+              <li className="flex items-start text-xs sm:text-sm text-gray-300 leading-relaxed">
+                <ArrowRight className="w-4 h-4 text-indigo-400 mt-1 mr-3 flex-shrink-0 group-hover:translate-x-1 transition-transform" />
+                <span>Coordinated placement activities between students, faculty, and recruiters.</span>
+              </li>
+              <li className="flex items-start text-xs sm:text-sm text-gray-300 leading-relaxed">
+                <ArrowRight className="w-4 h-4 text-indigo-400 mt-1 mr-3 flex-shrink-0 group-hover:translate-x-1 transition-transform" />
+                <span>Assisted in organizing recruitment drives and career development initiatives.</span>
+              </li>
+            </ul>
+          </motion.div>
         </div>
 
       </div>

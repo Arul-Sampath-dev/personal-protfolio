@@ -1,3 +1,9 @@
+export interface ExperienceSubSection {
+  title: string;
+  responsibilities: string[];
+  skills: string[];
+}
+
 export interface Internship {
   id: string;
   company: string;
@@ -5,23 +11,47 @@ export interface Internship {
   duration: string;
   responsibilities: string[];
   skills: string[];
+  subSections?: ExperienceSubSection[];
   color: string; // Tailwind gradient/accent color
 }
 
 export const experiences: Internship[] = [
   {
     id: "vrnexgen",
-    company: "VRneXGen",
+    company: "VRNeXGen Technologies",
     role: "Junior Software Developer Intern",
     duration: "January 2026 – Present",
     responsibilities: [
-      "Contributed to the UI/UX design of VRX-Learn, a Learning Management System (LMS).",
-      "Designed highly responsive dashboards and administrative interfaces.",
-      "Created intuitive course management workflows and user journey flows.",
-      "Developed interactive prototypes and comprehensive wireframes using Figma.",
-      "Focused heavily on web accessibility (a11y), usability, and cohesive multi-role user experiences."
+      "Designed and developed scalable backend APIs using FastAPI with a clean layered architecture (API, Service, Repository, and Database layers).",
+      "Created highly responsive workflows and complete role-based User Experiences for VRX-Learn LMS with Figma."
     ],
-    skills: ["UI/UX Design", "Figma", "Wireframing", "React", "Usability"],
+    skills: ["FastAPI", "Python", "PostgreSQL", "Figma", "JWT", "REST APIs", "UI/UX Design"],
+    subSections: [
+      {
+        title: "Software Development (FastAPI Backend)",
+        responsibilities: [
+          "Designed and developed scalable backend APIs using FastAPI with a clean layered architecture (API, Service, Repository, and Database layers).",
+          "Implemented JWT-based authentication with HTTP-only cookies and secure password hashing to enhance application security.",
+          "Developed RESTful APIs for authentication and core application functionalities.",
+          "Integrated PostgreSQL using psycopg2 and optimized database interactions through connection pooling and efficient query execution, improving application performance.",
+          "Participated in debugging, testing, API documentation, and feature deployment to ensure application reliability and maintainability."
+        ],
+        skills: ["FastAPI", "Python", "PostgreSQL", "psycopg2", "JWT", "REST APIs", "Git"]
+      },
+      {
+        title: "UI/UX Design (VRX-Learn LMS)",
+        responsibilities: [
+          "Designed complete user experiences for the VRX-Learn Learning Management System (LMS) using Figma.",
+          "Created role-based dashboards and workflows for Admin, Instructor, and Learner user groups.",
+          "Developed wireframes, user flows, low-fidelity and high-fidelity prototypes to validate design concepts.",
+          "Designed responsive interfaces optimized for desktop and mobile experiences.",
+          "Applied accessibility (WCAG) and usability principles to improve navigation, readability, and user engagement.",
+          "Collaborated with stakeholders and developers to transform business requirements into intuitive user experiences.",
+          "Produced reusable design components and design system guidelines to maintain consistency across the platform."
+        ],
+        skills: ["Figma", "Wireframing", "Prototyping", "User Flows", "Design Systems", "Responsive Design", "Accessibility (WCAG)", "UI/UX Research"]
+      }
+    ],
     color: "from-indigo-500 to-purple-500"
   },
   {

@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { Code, Layers, Server, Database, Figma, Cpu } from "lucide-react";
+import { Code, Layers, Server, Database, Figma, Cpu, BarChart3, Palette, Smartphone, Brain } from "lucide-react";
 import { skillCategories } from "../data/skills";
 
 // Dynamic map of category icons
@@ -9,7 +9,11 @@ const iconMap: Record<string, any> = {
   Server: Server,
   Database: Database,
   Figma: Figma,
-  Cpu: Cpu
+  Cpu: Cpu,
+  BarChart3: BarChart3,
+  Palette: Palette,
+  Smartphone: Smartphone,
+  Brain: Brain
 };
 
 export default function Skills() {
